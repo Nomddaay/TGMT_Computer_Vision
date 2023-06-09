@@ -58,7 +58,7 @@ def describe_keypoints(image, keypoints, patch_size=16):
 
 
 # Đường dẫn đến ảnh
-image_path = r'C:\Users\nomdd\OneDrive\Pictures\Screenshots\nam.jpg'
+image_path = 'images/mck.jpg'
 
 # Đọc ảnh
 image = cv2.imread(image_path)
