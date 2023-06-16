@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter
 from PIL import Image
 
-image_path = r"C:\Users\nomdd\OneDrive\Pictures\Screenshots\cay.jpg"
+image_path = r"images/train_images/vinh_uni/vinh_uni_012.png"
 
 image = Image.open(image_path)
 

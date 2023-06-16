@@ -18,7 +18,7 @@ def compute_gradients(image):
     orientation = np.arctan2(gradient_y, gradient_x) * 180 / np.pi
 
     return magnitude, orientation
-image = plt.imread(r'C:\Users\nomdd\OneDrive\Pictures\Screenshots\ava.jpg')
+image = plt.imread(r'C:\Users\nomdd\OneDrive\Pictures\Screenshots\nam.jpg')
 
 # Tính toán gradient
 magnitude, orientation = compute_gradients(image)
