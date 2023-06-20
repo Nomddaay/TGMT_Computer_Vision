@@ -3,8 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Hàm tính đạo hàm theo x và y
-
-
 def compute_gradient(image):
     dx = cv2.Sobel(image, cv2.CV_64F, 1, 0, ksize=3)
     dy = cv2.Sobel(image, cv2.CV_64F, 0, 1, ksize=3)
@@ -13,8 +11,6 @@ def compute_gradient(image):
     return magnitude, angle
 
 # Hàm phát hiện điểm đặc trưng
-
-
 def detect_keypoints(image, threshold):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     magnitude, angle = compute_gradient(gray)
@@ -31,7 +27,7 @@ def detect_keypoints(image, threshold):
                     magnitude[i, j] > magnitude[i, j+1] and
                     magnitude[i, j] > magnitude[i+1, j-1] and
                     magnitude[i, j] > magnitude[i+1, j] and
-                        magnitude[i, j] > magnitude[i+1, j+1]):
+                    magnitude[i, j] > magnitude[i+1, j+1]):
                     keypoints.append((i, j, magnitude[i, j], angle[i, j]))
 
     return keypoints
@@ -58,7 +54,7 @@ def describe_keypoints(image, keypoints, patch_size=16):
 
 
 # Đường dẫn đến ảnh
-image_path = 'images/mck.jpg'
+image_path = r'C:\Users\nomdd\OneDrive\Pictures\Screenshots\mck.jpg'
 
 # Đọc ảnh
 image = cv2.imread(image_path)
