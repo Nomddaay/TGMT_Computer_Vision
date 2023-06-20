@@ -43,6 +43,7 @@ def compute_gradients(pyramid):
         dy_pyramid.append(octave_dy)
     return dx_pyramid, dy_pyramid
 
+#Phát hiện các đặc trưng
 def detect_keypoints(dx_pyramid, dy_pyramid, threshold):
     keypoints = []
     for octave in range(len(dx_pyramid)):

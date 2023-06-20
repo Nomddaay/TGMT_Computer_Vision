@@ -19,12 +19,12 @@ else:
         blurred = gaussian_filter(image, sigma=1.5)
 
         # Tính toán gradient theo trục x và trục y
-        gradient_x = np.gradient(blurred, axis=1)
-        gradient_y = np.gradient(blurred, axis=0)
+        dx = np.gradient(blurred, axis=1)
+        dy = np.gradient(blurred, axis=0)
 
         # Tính toán độ lớn gradient và hướng gradient
-        gradient_magnitude = np.sqrt(gradient_x ** 2 + gradient_y ** 2)
-        gradient_direction = np.arctan2(gradient_y, gradient_x)
+        gradient_magnitude = np.sqrt(dx ** 2 + dy ** 2)
+        gradient_direction = np.arctan2(dy, dx)
 
         return gradient_magnitude, gradient_direction
 
